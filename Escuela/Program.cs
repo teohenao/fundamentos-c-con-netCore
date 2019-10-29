@@ -10,7 +10,8 @@ namespace Etapa1
             var escuela = new Escuela("escuela teo",2019);
             escuela.Pais = "Colombia";
             escuela.Ciudad = "Armenia";
-            Console.WriteLine(escuela.Nombre);
+            escuela.TipoEscuela = TiposEscuela.Primaria;
+            Console.WriteLine(escuela);
         }
     }
 }
