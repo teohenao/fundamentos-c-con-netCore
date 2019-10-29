@@ -1,0 +1,11 @@
+/home/mateo/Documentos/Platzi/Fundamentos de c#/CoreEscuela/bin/Debug/netcoreapp3.0/CoreEscuela
+/home/mateo/Documentos/Platzi/Fundamentos de c#/CoreEscuela/bin/Debug/netcoreapp3.0/CoreEscuela.deps.json
+/home/mateo/Documentos/Platzi/Fundamentos de c#/CoreEscuela/bin/Debug/netcoreapp3.0/CoreEscuela.runtimeconfig.json
+/home/mateo/Documentos/Platzi/Fundamentos de c#/CoreEscuela/bin/Debug/netcoreapp3.0/CoreEscuela.runtimeconfig.dev.json
+/home/mateo/Documentos/Platzi/Fundamentos de c#/CoreEscuela/bin/Debug/netcoreapp3.0/CoreEscuela.dll
+/home/mateo/Documentos/Platzi/Fundamentos de c#/CoreEscuela/bin/Debug/netcoreapp3.0/CoreEscuela.pdb
+/home/mateo/Documentos/Platzi/Fundamentos de c#/CoreEscuela/obj/Debug/netcoreapp3.0/CoreEscuela.csprojAssemblyReference.cache
+/home/mateo/Documentos/Platzi/Fundamentos de c#/CoreEscuela/obj/Debug/netcoreapp3.0/CoreEscuela.AssemblyInfoInputs.cache
+/home/mateo/Documentos/Platzi/Fundamentos de c#/CoreEscuela/obj/Debug/netcoreapp3.0/CoreEscuela.AssemblyInfo.cs
+/home/mateo/Documentos/Platzi/Fundamentos de c#/CoreEscuela/obj/Debug/netcoreapp3.0/CoreEscuela.dll
+/home/mateo/Documentos/Platzi/Fundamentos de c#/CoreEscuela/obj/Debug/netcoreapp3.0/CoreEscuela.pdb
