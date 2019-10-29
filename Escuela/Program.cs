@@ -9,23 +9,32 @@ namespace Etapa1
         {
             var escuela = new Escuela("escuela teo",2019,TiposEscuela.Prescolar,
             pais:"coooloommmbia",ciudad:"Calarcaaa"
-            
             );
-            var curso1 = new Curso(){
+
+            var arregloCursos = new Curso[3];
+            arregloCursos [0] = new Curso(){
                 Nombre ="101"
             };
-              var curso2 = new Curso(){
+            arregloCursos [1] = new Curso(){
                 Nombre ="201"
             };
-              var curso3 = new Curso(){
+            arregloCursos [2] = new Curso(){
                 Nombre ="301"
             };
             escuela.TipoEscuela = TiposEscuela.Primaria;
             Console.WriteLine(escuela);
-            System.Console.WriteLine("====================");
-            Console.WriteLine(curso1.Nombre +" , "+curso2.UniqueId);
-            Console.WriteLine($"{curso2.Nombre},{curso2.UniqueId}");
-            Console.WriteLine(curso3);
+            System.Console.WriteLine("=========cursos===========");
+            imprimirCursos(arregloCursos);
+        }
+
+        private static void imprimirCursos(Curso[] arregloCursos)
+        {
+          int count = 0;
+          while (count < arregloCursos.Length)
+          {
+              Console.WriteLine(arregloCursos[count].Nombre);
+              count++;
+          }
         }
     }
 }
