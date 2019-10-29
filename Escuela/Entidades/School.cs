@@ -15,6 +15,15 @@ namespace   School.Entidades
         public TiposEscuela TipoEscuela {get; set;}     
         //inicializador
         public Escuela(string nombre,int año)=> (Nombre,añoCreacion) = (nombre,año);
+        public Escuela(string nombre,int año,
+            TiposEscuela tipos, string pais = "", string ciudad ="")
+        {
+            //asignacion de tuplas 
+            (Nombre,añoCreacion) = (nombre,año);
+            Pais = pais;
+            Ciudad = ciudad;
+        }
+
         //ToString del objeto
         public override string ToString()
         {
