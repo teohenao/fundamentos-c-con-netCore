@@ -12,7 +12,9 @@ namespace   School.Entidades
         public int añoCreacion{get;set;}
         public string Pais { get; set;}
         public string Ciudad { get; set;}
-        public TiposEscuela TipoEscuela {get; set;}     
+        public TiposEscuela TipoEscuela {get; set;}    
+        public Curso[] Cursos { get; set; }
+
         //inicializador
         public Escuela(string nombre,int año)=> (Nombre,añoCreacion) = (nombre,año);
         public Escuela(string nombre,int año,

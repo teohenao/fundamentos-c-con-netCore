@@ -1,5 +1,6 @@
 ﻿using System;
 using School.Entidades;
+using static System.Console;
 
 namespace Etapa1
 {
@@ -11,71 +12,33 @@ namespace Etapa1
             pais: "coooloommmbia", ciudad: "Calarcaaa"
             );
 
-            var arregloCursos = new Curso[3];
-            arregloCursos[0] = new Curso()
-            {
-                Nombre = "101"
+            escuela.Cursos = new Curso[]{
+            new Curso(){Nombre = "101",},
+            new Curso(){Nombre = "201"},
+            new Curso(){Nombre = "301"}
             };
-            arregloCursos[1] = new Curso()
-            {
-                Nombre = "201"
-            };
-            arregloCursos[2] = new Curso()
-            {
-                Nombre = "301"
-            };
-            escuela.TipoEscuela = TiposEscuela.Primaria;
-            Console.WriteLine(escuela);
-            System.Console.WriteLine("=========cursos===========");
-            imprimirCursosWhile(arregloCursos);
-            imprimirCursosDoWhile(arregloCursos);
-            imprimirCursosFor(arregloCursos);
-            imprimirCursosForEach(arregloCursos);
+
+            ImprimirCursosEscuela(escuela);
+
+
         }
 
-
-        private static void imprimirCursosWhile(Curso[] arregloCursos)
+        private static void ImprimirCursosEscuela(Escuela escuela)
         {
-            int count = 0;
-            while (count < arregloCursos.Length)
-            {
-                Console.WriteLine(arregloCursos[count].Nombre);
-                count++;
+            WriteLine("========Lista cursos escuela========");
+            //el signo de interrogacion significa que no verificara cursos salvo que escuela sea diferente de null
+            if(escuela?.Cursos==null)
+            return;
+            else{
+                 foreach (var curso in escuela.Cursos)
+                {
+                 WriteLine($"nombre: {curso.Nombre}, id: {curso.UniqueId}");
+                }
+
             }
+        
         }
 
-        private static void imprimirCursosDoWhile(Curso[] arregloCursos)
-        {
-            int count = 0;
-            do
-            {
-                Console.WriteLine(arregloCursos[count].Nombre);
-                count++;
-
-
-                //si se coloca en el while 
-                //count ++, primero pregunta y despues aumenta
-                //++count primero aumenta y despues pregunta
-            } while (count < arregloCursos.Length);
-        }
-
-
-        private static void imprimirCursosFor(Curso[] arregloCursos)
-        {
-            for (int i = 0; i < arregloCursos.Length; i++)
-            {
-                Console.WriteLine(arregloCursos[i].Nombre);
-            }
-
-        }
-
-        private static void imprimirCursosForEach(Curso[] arregloCursos)
-        {
-            foreach (var curso in arregloCursos)
-            {
-                Console.WriteLine(curso.Nombre);
-            }
-        }
 
     }
 }
