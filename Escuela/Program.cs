@@ -16,7 +16,8 @@ namespace Etapa1
             escuela.Cursos = new List<Curso>(){
                  new Curso(){Nombre = "101",},
             new Curso(){Nombre = "201"},
-            new Curso(){Nombre = "301"}
+            new Curso(){Nombre = "301",TipoJornada = TiposJornada.Noche},
+            new Curso(){Nombre = "301",TipoJornada = TiposJornada.Mañana}
             };
 
             Curso c = new Curso();
@@ -41,9 +42,21 @@ namespace Etapa1
             temp.TipoJornada = TiposJornada.Tarde;
             escuela.Cursos.Add(temp);
 
-            ImprimirCursosEscuela(escuela);
             WriteLine("temp.hasCode"+temp.GetHashCode());
-            escuela.Cursos.Remove(temp);
+
+            //La funcion del predicado es como buscar-encontrar 
+            //Predicate<Curso> dropPredicate = predicado;    
+            //escuela.Cursos.RemoveAll(dropPredicate);
+
+            //eliminar por medio de delegados, el ejecuta la rutina y se implementa para los que cumplan
+            escuela.Cursos.RemoveAll(delegate (Curso c){
+                return c.Nombre == "vacacional";
+            });
+
+            //Expresion lamnda, el ya asimila por el escuela.cursos que cur es de tipo curso
+            escuela.Cursos.RemoveAll((cur)=>cur.Nombre == "301" && cur.TipoJornada == TiposJornada.Noche);
+
+            ImprimirCursosEscuela(escuela);
         }
         private static void ImprimirCursosEscuela(Escuela escuela)
         {
@@ -56,6 +69,11 @@ namespace Etapa1
                  WriteLine($"nombre: {curso.Nombre}, id: {curso.UniqueId}");
                 }
             }
+        }
+
+        private static bool predicado(Curso c)
+        {
+            return c.Nombre == "vacacional";
         }
     }
 }
