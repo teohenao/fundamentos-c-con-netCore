@@ -3,7 +3,7 @@ using System.Collections.Generic;
 namespace   School.Entidades
 {
     //no importa el nombre de la clase coincida con el de la clase
-    class Escuela
+    public class Escuela
     {
         string nombre;
         public string Nombre{
