@@ -36,16 +36,18 @@ namespace Etapa1
             lista2Cursos.Add(c2);
             escuela.Cursos.AddRange(lista2Cursos);
 
+            Curso temp = new Curso();
+            temp.Nombre="vacacional";
+            temp.TipoJornada = TiposJornada.Tarde;
+            escuela.Cursos.Add(temp);
+
             ImprimirCursosEscuela(escuela);
-
-
+            WriteLine("temp.hasCode"+temp.GetHashCode());
+            escuela.Cursos.Remove(temp);
         }
-
         private static void ImprimirCursosEscuela(Escuela escuela)
         {
             WriteLine("========Lista cursos escuela========");
-            //el signo de interrogacion significa que no verificara cursos salvo que 
-            //escuela sea diferente de null
             if(escuela?.Cursos==null)
             return;
             else{
@@ -53,11 +55,7 @@ namespace Etapa1
                 {
                  WriteLine($"nombre: {curso.Nombre}, id: {curso.UniqueId}");
                 }
-
             }
-        
         }
-
-
     }
 }
