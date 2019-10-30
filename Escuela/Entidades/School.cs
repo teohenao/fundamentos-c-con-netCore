@@ -1,3 +1,5 @@
+using System.Collections.Generic;
+
 namespace   School.Entidades
 {
     //no importa el nombre de la clase coincida con el de la clase
@@ -13,7 +15,7 @@ namespace   School.Entidades
         public string Pais { get; set;}
         public string Ciudad { get; set;}
         public TiposEscuela TipoEscuela {get; set;}    
-        public Curso[] Cursos { get; set; }
+        public List<Curso> Cursos { get; set; }
 
         //inicializador
         public Escuela(string nombre,int año)=> (Nombre,añoCreacion) = (nombre,año);
