@@ -19,7 +19,8 @@ namespace Etapa1
             WriteLine("========Lista cursos escuela========");
             if(escuela?.Cursos==null)
             return;
-            else{
+            else
+            {
                  foreach (var curso in escuela.Cursos)
                 {
                  WriteLine($"nombre: {curso.Nombre}, id: {curso.UniqueId}");
