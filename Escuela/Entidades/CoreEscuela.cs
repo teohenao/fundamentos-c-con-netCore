@@ -1,10 +1,12 @@
+using System;
 using System.Collections.Generic;
 
-namespace   School.Entidades
+namespace  CoreEscuela.Entidades
 {
     //no importa el nombre de la clase coincida con el de la clase
     public class Escuela
     {
+        public string UniqueId{get; private set;} = Guid.NewGuid().ToString();
         string nombre;
         public string Nombre{
             get{ return nombre;}

@@ -1,8 +1,8 @@
 
 using System.Collections.Generic;
-using School.Entidades;
+using CoreEscuela.Entidades;
 
-namespace School
+namespace CoreEscuela
 {
     public class EscuelaEngine
     {
