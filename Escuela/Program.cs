@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using School;
 using School.Entidades;
+using School.Util;
 using static System.Console;
 
 namespace Etapa1
@@ -12,11 +13,14 @@ namespace Etapa1
         {
             var engine = new EscuelaEngine();
             engine.Inicializar();
+            Printer.dibujarTitulo("Bienvenidos a la escuela");
             ImprimirCursosEscuela(engine.Escuela);
         }
         private static void ImprimirCursosEscuela(Escuela escuela)
         {
-            WriteLine("========Lista cursos escuela========");
+            Printer.dibujarLinea(20);
+            Printer.dibujarTitulo("cursos de la escuela");
+            Printer.dibujarLinea(20);
             if(escuela?.Cursos==null)
             return;
             else
